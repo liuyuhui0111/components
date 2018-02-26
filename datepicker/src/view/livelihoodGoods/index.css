@@ -1,0 +1,13 @@
+.toonui-indicator-wrapper{
+  background: transparent !important;
+}
+.emptyList{
+  min-height: 100px;
+  text-align: center;
+  padding-top: 80px ;
+}
+.emptyList p{
+
+  font-size: 15px;
+  color: #777E8C;
+}

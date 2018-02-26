@@ -1,0 +1,82 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+
+<title>Mobiscroll</title>
+<script src="js/jquery-1.11.1.min.js"></script>
+
+<script src="js/mobiscroll.core.js"></script>
+<script src="js/mobiscroll.widget.js"></script>
+<script src="js/mobiscroll.scroller.js"></script>
+<script src="js/mobiscroll.util.datetime.js"></script>
+<script src="js/mobiscroll.datetimebase.js"></script>
+<script src="js/mobiscroll.widget.ios.js"></script>
+<script src="js/mobiscroll.i18n.zh.js"></script>
+
+<link href="css/mobiscroll.animation.css" rel="stylesheet" type="text/css" />
+<link href="css/mobiscroll.widget.css" rel="stylesheet" type="text/css" />
+<link href="css/mobiscroll.widget.ios.css" rel="stylesheet" type="text/css" />
+<link href="css/mobiscroll.scroller.css" rel="stylesheet" type="text/css" />
+<link href="css/mobiscroll.scroller.ios.css" rel="stylesheet" type="text/css" />
+
+
+<!--<script src="min/mobiscroll.date.min.js"></script>-->
+<!--<link href="min/mobiscroll.date.min.css" rel="stylesheet" type="text/css" />-->
+
+<script type="text/javascript">
+
+</script>
+
+</head>
+
+<body>
+
+<input type="text" name="test" id="dateinput" value = "2015-02" />
+
+</body>
+<style>
+	*{color: red!important;}
+</style>
+
+<script>
+	
+	window.onload = function(){
+		//document.getElementById("dateinput").setAttribute("value","2015-05-06 05:06");
+		//$("#dateinput").val("2015-05-06 05:06")
+		
+		$(function () {
+			var nowData=new Date();
+			var opt= {
+				theme:'ios', //设置显示主题 
+				mode:'scroller', //设置日期选择方式，这里用滚动
+				display:'bottom', //设置控件出现方式及样式
+				preset : 'date', //日期:年 月 日 时 分
+		//		minDate: new Date(2016,nowData.getMonth(),1,00,00),
+				maxDate:new Date(2100,nowData.getMonth(),nowData.getDate()+7,23,59),
+		        dateFormat: 'yy-mm', // 日期格式
+		        dateOrder: 'YYmm', //面板中日期排列格式
+				stepMinute: 1, //设置分钟步长
+				yearText:'年',
+				monthText:'月',
+				dayText:'日',
+				hourText:'时',
+				minuteText:'分',
+				lang:'zh' //设置控件语言};
+			};
+			///$('#dateinput').mobiscroll(opt);
+
+
+			$('#dateinput').mobiscroll(opt);
+
+
+
+		});
+		
+	}
+	
+</script>
+
+</html>

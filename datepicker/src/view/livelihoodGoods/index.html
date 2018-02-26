@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="grey">
+    <meta name="format-detection" content="telephone=no">
+    <title>民生商品</title>
+    <script>
+      var defaultW = 375 ;
+      if(/Android (d+.d+)/.test(navigator.userAgent)){var version=parseFloat(RegExp.$1);if(version>2.3){var phoneScale=parseInt(window.screen.width)/defaultW;document.write('<meta name="viewport" content="width='+defaultW+'", minimum-scale = '+phoneScale+", maximum-scale = "+phoneScale+', target-densitydpi=device-dpi">')}else{document.write('<meta name="viewport" content="width='+defaultW+'">')}}else{document.write('<meta name="viewport" content="width='+defaultW+', user-scalable=no">')};
+
+      //配置config
+      var configUrl =  location.host.substr( 0,location.host.indexOf(".") ) || "172" ;
+      document.write( '<script src="../static/config/livelihoodGoods/'+ configUrl +'.config.js"><\/script>')
+    </script>
+  </head>
+  <body class="dashboard" id="dashboard" >
+      <div id="app"></div>
+  </body>
+</html>
